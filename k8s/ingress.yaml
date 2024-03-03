@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: poisson-confidence-intervals-frontend-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+        - poisson-confidence-intervals.brojonat.com
+      secretName: poisson-confidence-intervals-frontend-tls
+  rules:
+    - host: "poisson-confidence-intervals.brojonat.com"
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: poisson-confidence-intervals-frontend
+                port:
+                  number: 80
