@@ -92,8 +92,8 @@
                     CL \]
                   </p>
                   <p>
-                    Single these are for the single sided limits. Double sided
-                    limits are simply \( (1+CL)/2 \).
+                    These are for the single sided limits. Double sided limits
+                    are simply \( (1+CL)/2 \).
                   </p>
                   <p>
                     It is not possible to obtain exact algebraic expressions for
